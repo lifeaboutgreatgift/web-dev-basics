@@ -1,0 +1,5 @@
+body {
+    background-color: white;
+    display: flex;
+    min-height: 100vh;
+}
