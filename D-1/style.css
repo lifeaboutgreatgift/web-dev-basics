@@ -4,7 +4,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
     min-height: 10vh;
     margin: 0 auto;
     gap: 20px;
