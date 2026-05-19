@@ -9,6 +9,14 @@ body {
     overflow-x: hidden; /* NOTE: Prevents horizontal scrolling during slide animations */
 }
 
+/*transition  → smooth change between two states
+              (normal → hover)
+
+animation   → plays automatically
+              (no hover needed!)
+
+transform   → moves, scales, rotates elements
+*/
 .page {
     display: grid;
     grid-template-columns: 250px 1fr;
