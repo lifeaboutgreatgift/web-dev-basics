@@ -1,0 +1,261 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    overflow-x: hidden; /* NOTE: Prevents horizontal scrolling during slide animations */
+}
+
+/*transition  → smooth change between two states
+              (normal → hover)
+
+animation   → plays automatically
+              (no hover needed!)
+
+transform   → moves, scales, rotates elements
+*/
+.page {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+    /* column-gap: 10px;
+    background-color: #9a4e4e; */
+}
+
+.header {
+    grid-area: header;
+    background-color: #333;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* grid-column: 1 / 3; */
+    
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+     /* NOTE 1: Smooth color transition for header links */
+    transition: color 0.2s ease-in-out;
+}
+
+/* HOVER EFFECT 1: Text color dim */
+.nav-links a:hover {
+    color: #b3b3b3;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.logo {
+    animation: slideIn 0.5s ease both,
+               pulse 2s ease 0.5s infinite;
+}
+
+.logo:hover {
+    animation-play-state: paused;
+}
+
+.login-btn {
+    background-color: rgb(30, 124, 255);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+
+     /* NOTE 2: Prepares button for background and size changes */
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    transform-origin: center;
+}
+
+/* HOVER EFFECT 2: Darken background & click press effect */
+.login-btn:hover {
+    background-color: rgb(0, 84, 204);
+    transform: rotate(10deg);
+}
+
+.login-btn:active {
+    transform: scale(0.95); /* Shrinks button slightly when clicked */
+}
+
+.sidebar {
+    background-color: #f0f0f0;
+    padding: 20px;
+    grid-area: sidebar;
+}
+
+.sidebar h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.sidebar ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+    display: inline-block; /* Required to make transform move the element properly */
+    /* NOTE 3: Smooth translation transition */
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+/* HOVER EFFECT 3: Color shift AND slight slide right */
+.sidebar ul li a:hover {
+    color: rgb(30, 124, 255);
+    transform: translateX(5px);  /* Moves 5px to the right */
+}
+
+
+.sidebar ul li a::before {
+    content: '→ ';
+    color: rgb(30, 124, 255);
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+.sidebar ul li a:hover::before {
+    opacity: 1;
+   
+}
+.main {
+    background-color: white;
+    padding: 30px;
+    grid-area: main;
+}
+
+.main h2 {
+    margin-bottom: 20px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* NOTE 4: Multi-property transition for card lift mechanics */
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease;
+
+     /* ANIMATION 1: Applies keyframe entrance when the page first loads */
+    animation: cardEntrance 0.6s ease-out backwards;
+}
+
+/* Dynamic staggering to make cards animate one after another */
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+
+/* HOVER EFFECT 4: The Card 3D Lift */
+.card:hover {
+    transform: translateY(-8px); /* Lifts upward */
+    box-shadow: 0px 12px 20px rgba(0,0,0,0.15); /* Softens and deepens shadow */
+}
+
+.card h3 {
+    font-size: 18px;
+}
+
+.card p {
+    color: #666;
+    font-size: 14px;
+}
+
+.btn {
+    background-color: rgb(30, 124, 255);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: fit-content;
+        /* NOTE 5: Linear transition specifically targeting width padding spacing */
+    transition: background-color 0.2s ease, padding 0.2s ease;
+
+}
+
+/* HOVER EFFECT 5: Button background swap and expand text track width */
+.btn:hover {
+    background-color: rgb(0, 84, 204);
+    padding: 8px 24px; /* Widens the button container dynamically */
+}
+
+
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 30px;
+    grid-area: footer;
+    text-align: center;
+}
+
+/* ==========================================
+   3. KEYFRAMES ENGINE (Automatic Animations)
+   ========================================== */
+
+/* This rule animates cards sliding up from bottom and fading in upon loading */
+@keyframes cardEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
