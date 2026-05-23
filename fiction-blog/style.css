@@ -1,0 +1,262 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f9f6f0;
+    font-family:Georgia, serif;
+    color: #1a1a1a;
+}
+
+body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    border-bottom: 1px solid #ddd;
+    background-color: #f9f6f0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-left {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-left a {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.nav-left a:hover {
+    color: #8b0000;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #1a1a1a;
+}
+
+.nav-right {
+    display: flex; 
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-right a{
+    text-decoration: none;
+    color: #1a1a1a;
+    font-size: 13px;
+}
+
+.sub-btn {
+    background-color: #1a1a1a;
+    color: #f9f6f0;
+    border: none;
+    padding: 8px 18px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.sub-btn:hover {
+    background-color: #8b0000;
+}
+
+.page-heading {
+    text-align: center;
+    padding: 40px 20px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.category-label {
+    font-size: 13px;
+    letter-spacing: 3px;
+    color: #8b0000;
+    font-family: Arial, sans-serif;
+}
+
+/* CARDS */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    opacity: 0.85;
+}
+
+.card-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 20% 30%;
+    transition: 0.4s ease;
+}
+
+.card:hover .card-image img {
+    transform: scale(1.05);
+}
+
+.card-category {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #8b0000;
+    font-family: Arial, sans-serif;
+    margin-bottom: 8px;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.card-desc {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.card-author {
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #888;
+    font-family: Arial, sans-serif;
+}
+
+.footer {
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid #ddd;
+    font-size: 13px;
+    color: #888;
+    font-family: Arial, sans-serif;
+    margin-top: 40px;
+}
+
+
+
+
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+/* HERO IMAGE */
+.hero-image {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 10% 20%;
+}
+
+/* ARTICLE HEADER */
+.article-header {
+    max-width: 700px;
+    margin: 40px auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.article-category {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #8b0000;
+    font-family: Arial, sans-serif;
+    margin-bottom: 15px;
+}
+
+.article-title {
+    font-size: 42px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.article-author {
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-family: Arial, sans-serif;
+    margin-bottom: 8px;
+}
+
+.article-date {
+    font-size: 13px;
+    color: #888;
+    font-family: Arial, sans-serif;
+    margin-bottom: 30px;
+}
+
+.divider {
+    width: 60px;
+    height: 1px;
+    background-color: #8b0000;
+    margin: 0 auto;
+}
+
+/* ARTICLE CONTENT */
+.article-content {
+    max-width: 680px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.article-content p {
+    font-size: 18px;
+    line-height: 1.9;
+    margin-bottom: 25px;
+    color: #1a1a1a;
+}
+
+/* DROP CAP - big first letter! */
+.drop-cap-para::first-letter {
+    font-size: 5em;
+    float: left;
+    line-height: 0.8;
+    margin-right: 10px;
+    margin-top: 5px;
+    color: #8b0000;
+    font-weight: bold;
+}
