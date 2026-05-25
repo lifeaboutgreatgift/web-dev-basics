@@ -1,0 +1,183 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    padding: 40px;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #1a1a1a;
+}
+
+.section {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.section h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* ================================
+   LINK STATES
+   ================================ */
+a {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 16px;
+    text-decoration: none;
+    color: rgb(30, 124, 255);
+    transition: 0.3s ease;
+}
+
+a:hover {
+    color: rgb(0, 90, 200);
+    text-decoration: underline;
+}
+
+a:visited {
+    color: purple; /* visited links turn purple! */
+}
+
+a:active {
+    color: red; /* while clicking! */
+}
+
+/* ================================
+   LIST - nth-child
+   ================================ */
+.list {
+    list-style: none;
+}
+
+.list li {
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+/* zebra striping! */
+.list li:nth-child(odd) {
+    background-color: #f0f2f5;
+}
+
+.list li:nth-child(even) {
+    background-color: #e8f0fe;
+}
+
+/* first and last */
+.list li:first-child {
+    border-top: 3px solid rgb(30, 124, 255);
+}
+
+.list li:last-child {
+    border-bottom: 3px solid rgb(30, 124, 255);
+}
+
+/* ================================
+   BUTTON STATES
+   ================================ */
+.btn {
+    padding: 10px 20px;
+    background-color: rgb(30, 124, 255);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background-color: rgb(0, 90, 200);
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: translateY(0);
+    background-color: rgb(0, 60, 150);
+}
+
+.btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* ================================
+   INPUT STATES
+   ================================ */
+input[type="text"] {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    margin-bottom: 10px;
+    transition: 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: rgb(30, 124, 255);
+    box-shadow: 0 0 0 3px rgba(30, 124, 255, 0.1);
+}
+
+/* targets input that has value typed in! */
+input[type="text"]:not(:placeholder-shown) {
+    border-color: green;
+    background-color: #f0fff0;
+}
+
+/* checkbox checked state */
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.checkbox-label input {
+    width: auto;
+}
+
+/* when checkbox is checked → change label color */
+.checkbox-label input:checked + span {
+    color: rgb(30, 124, 255);
+    font-weight: bold;
+}
+
+::selection {
+    background-color: rgb(30, 124, 255);
+    color: white;
+}
+
+.demo-text::first-line {
+    font-weight: bold;
+    color: rgb(30, 124, 255);
+}
+
+.demo-text::first-letter {
+    font-size: 3em;
+    float: left;
+    color: rgb(30, 124, 255);
+    font-weight: bold;
+    margin-right: 5px;
+    line-height: 0.8;
+}
