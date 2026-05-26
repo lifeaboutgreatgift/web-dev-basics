@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    padding: 40px;
+    font-size: 16px; /* root font size! */
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #1a1a1a;
+}
+
+.section {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.section h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* BASE BOX */
+.box {
+    background-color: #667eea;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ================================
+   1. PX - Fixed
+   ================================ */
+.px-box {
+    width: 300px; /* always 300px no matter what! */
+}
+
+/* ================================
+   2. % - Relative to parent
+   ================================ */
+.parent-box {
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.percent-box {
+    width: 50%; /* 50% of parent! */
+}
+
+/* ================================
+   3. EM - Relative to parent font
+   ================================ */
+.em-parent {
+    font-size: 20px; /* parent font size */
+    color: #333;
+}
+
+.em-box {
+    padding: 2em;  /* 2 x 20px = 40px padding! */
+    font-size: 1.5em; /* 1.5 x 20px = 30px */
+    margin-top: 10px;
+}
+
+/* ================================
+   4. REM - Relative to root font
+   ================================ */
+.rem-box {
+    width: 20rem;  /* 20 x 16px = 320px */
+    font-size: 1.5rem; /* 1.5 x 16px = 24px */
+}
+
+/* ================================
+   5. VW VH - Viewport units
+   ================================ */
+.vw-box {
+    width: 50vw;  /* 50% of screen width */
+    background-color: #f093fb;
+}
+
+.vh-box {
+    width: 100%;
+    height: 30vh; /* 30% of screen height */
+    background-color: #f5576c;
+}
+
+/* ================================
+   6. FULL SCREEN HERO
+   ================================ */
+.hero-full {
+    width: 100vw;           /* full screen width */
+    height: 100vh;          /* full screen height */
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    margin-left: -40px;     /* cancel body padding */
+}
+
+.hero-full h2 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.hero-full p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+/* CALC */
+.calc-box {
+    width: calc(100% - 100px);
+    background-color: #6bcb77;
+}
+
+/* CLAMP */
+.clamp-text {
+    font-size: clamp(10px, 2vw, 60px);
+    font-weight: bold;
+    color: #333;
+    padding: 20px 0;
+}
+
+/* MIN MAX */
+.min-box {
+    width: min(500px, 100%);
+    background-color: #ffd93d;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.max-box {
+    width: max(200px, 50%);
+    background-color: #ff6b6b;
+}

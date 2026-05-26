@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Day 12 - CSS Units</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <h1>CSS Units Practice</h1>
+
+        <!-- PX -->
+        <section class="section">
+            <h2>PX — Fixed Units</h2>
+            <div class="box px-box">width: 300px</div>
+        </section>
+
+        <!-- PERCENTAGE -->
+        <section class="section">
+            <h2>% — Relative to Parent</h2>
+            <div class="parent-box">
+                <div class="box percent-box">width: 50%</div>
+            </div>
+        </section>
+
+        <!-- EM -->
+        <section class="section">
+            <h2>EM — Relative to Parent Font Size</h2>
+            <div class="em-parent">
+                Parent font-size: 20px
+                <div class="box em-box">padding: 2em = 40px</div>
+            </div>
+        </section>
+
+        <!-- REM -->
+        <section class="section">
+            <h2>REM — Relative to Root Font Size</h2>
+            <div class="box rem-box">width: 20rem</div>
+        </section>
+
+        <!-- VW VH -->
+        <section class="section">
+            <h2>VW & VH — Viewport Units</h2>
+            <div class="box vw-box">width: 50vw</div>
+            <div class="box vh-box">height: 30vh</div>
+        </section>
+
+        <!-- FULL SCREEN HERO -->
+        <section class="hero-full">
+            <h2>Full Screen Hero</h2>
+            <p>width: 100vw, height: 100vh</p>
+        </section>
+
+                <!-- add to HTML -->
+        <section class="section">
+            <h2>calc() — Math in CSS</h2>
+            <div class="box calc-box">width: calc(100% - 100px)</div>
+        </section>
+
+        <section class="section">
+            <h2>clamp() — Fluid Typography</h2>
+            <p class="clamp-text">Resize the browser and watch me scale!</p>
+        </section>
+
+        <section class="section">
+            <h2>min() and max()</h2>
+            <div class="box min-box">width: min(500px, 100%)</div>
+            <div class="box max-box">width: max(200px, 50%)</div>
+        </section>
+
+    </body>
+</html>
