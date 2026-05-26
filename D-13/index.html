@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Day 13 - Scroll & Overflow</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <!-- NAVBAR - sticky -->
+        <nav class="navbar">
+            <div class="logo">ScrollSite</div>
+            <div class="nav-links">
+                <a href="#section1">Home</a>
+                <a href="#section2">About</a>
+                <a href="#section3">Work</a>
+                <a href="#section4">Contact</a>
+            </div>
+        </nav>
+
+        <!-- SECTION 1 -->
+        <section id="section1" class="full-section s1">
+            <h1>Home</h1>
+            <p>Scroll down smoothly!</p>
+            <a href="#section2" class="scroll-btn">↓ Scroll Down</a>
+        </section>
+
+        <!-- SECTION 2 -->
+        <section id="section2" class="full-section s2">
+            <h1>About</h1>
+            <p>Each section snaps into place!</p>
+            <a href="#section3" class="scroll-btn">↓ Next</a>
+        </section>
+
+        <!-- SECTION 3 -->
+        <section id="section3" class="full-section s3">
+            <h1>Work</h1>
+            <p>Smooth scroll behavior!</p>
+            <a href="#section4" class="scroll-btn">↓ Next</a>
+        </section>
+
+        <!-- SECTION 4 -->
+        <section id="section4" class="full-section s4">
+            <h1>Contact</h1>
+            <p>You made it to the end!</p>
+            <a href="#section1" class="scroll-btn">↑ Back to Top</a>
+        </section>
+
+        <!-- OVERFLOW EXAMPLES -->
+        <div class="overflow-section">
+
+            <h2>Overflow Examples</h2>
+
+            <!-- OVERFLOW HIDDEN -->
+            <div class="overflow-demo">
+                <h3>overflow: hidden</h3>
+                <div class="overflow-box hidden-box">
+                    This text is very long and will be cut off when it goes outside the box boundary. You cannot scroll to see it!
+                </div>
+            </div>
+
+            <!-- OVERFLOW SCROLL -->
+            <div class="overflow-demo">
+                <h3>overflow: scroll</h3>
+                <div class="overflow-box scroll-box">
+                    This text is very long and will be scrollable when it goes outside the box boundary. You can scroll to see all the content inside this box!
+                </div>
+            </div>
+
+            <!-- OVERFLOW AUTO -->
+            <div class="overflow-demo">
+                <h3>overflow: auto</h3>
+                <div class="overflow-box auto-box">
+                    This text is very long and scrollbar only appears when needed. This is the most commonly used overflow value in real projects!
+                </div>
+            </div>
+
+            <!-- HORIZONTAL SCROLL -->
+            <div class="overflow-demo">
+                <h3>Horizontal Scroll Cards</h3>
+                <div class="h-scroll-container">
+                    <div class="h-card">Card 1</div>
+                    <div class="h-card">Card 2</div>
+                    <div class="h-card">Card 3</div>
+                    <div class="h-card">Card 4</div>
+                    <div class="h-card">Card 5</div>
+                    <div class="h-card">Card 6</div>
+                </div>
+            </div>
+
+        </div>
+
+    </body>
+</html>
