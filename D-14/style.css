@@ -1,0 +1,224 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    padding: 40px;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #1a1a1a;
+}
+
+.section {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.section h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* ================================
+   CSS FILTERS
+   ================================ */
+.filter-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.filter-card {
+    text-align: center;
+}
+
+.filter-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    transition: fiter 0.3s ease;
+}
+
+.filter-card p {
+    font-size: 12px;
+    color: #666;
+}
+
+/* FILTERS */
+.blur { filter: blur(4px); }
+.grayscale { filter: grayscale(100%); }
+.brightness { filter: brightness(150%); }
+.contrast { filter: contrast(200%); }
+.sepia { filter: sepia(100%); }
+.hue-rotate { filter: hue-rotate(180deg); }
+.invert { filter: invert(100%); }
+
+/* HOVER - remove filter on hover! */
+.filter-card img {
+    transition: filter 0.3s ease;
+}
+
+.filter-card img:hover {
+    filter: none !important; /* shows original on hover! */
+}
+
+/* ================================
+   GLASSMORPHISM
+   ================================ */
+.glass-container {
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* decorative circles behind glass */
+.glass-container::before {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    top: -50px;
+    left: -50px;
+}
+
+.glass-container::after {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    bottom: -30px;
+    right: -30px;
+}
+
+.glass-card {
+    background: rgba(255,255,255,0.15);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 16px;
+    padding: 30px 40px;
+    text-align: center;
+    color: white;
+    z-index: 1;
+}
+
+.glass-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* ================================
+   ASPECT RATIO
+   ================================ */
+.ratio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.ratio-box {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+
+.ratio-square { aspect-ratio: 1 / 1; }
+.ratio-wide { aspect-ratio: 16 / 9; }
+.ratio-portrait { aspect-ratio: 3 / 4; }
+
+/* ================================
+   CURSORS
+   ================================ */
+.cursor-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.cursor-box {
+    background-color: #f0f2f5;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    font-size: 13px;
+    color: #333;
+    transition: 0.3s ease;
+}
+
+.cursor-box:hover {
+    background-color: #667eea;
+    color: white;
+}
+
+.cursor-pointer { cursor: pointer; }
+.cursor-crosshair { cursor: crosshair; }
+.cursor-move { cursor: move; }
+.cursor-not-allowed { cursor: not-allowed; }
+.cursor-grab { cursor: grab; }
+.cursor-zoom-in { cursor: zoom-in; }
+.cursor-text { cursor: text; }
+.cursor-wait { cursor: wait; }
+
+/* ================================
+   MIX BLEND MODE
+   ================================ */
+.blend-container {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: #1a1a1a;
+    border-radius: 12px;
+}
+
+.blend-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    position: absolute;
+    mix-blend-mode: screen;
+}
+
+.circle1 {
+    background-color: red;
+    left: calc(50% - 100px);
+}
+
+.circle2 {
+    background-color: green;
+    left: calc(50% - 30px);
+}
+
+.circle3 {
+    background-color: blue;
+    left: calc(50% + 40px);
+}
