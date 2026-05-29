@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Day 4 - Arrays & Loops</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                padding: 40px;
+                background-color: #f0f2f5;
+            }
+
+            .section {
+                background-color: white;
+                padding: 25px;
+                border-radius: 12px;
+                margin-bottom: 20px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            }
+
+            h2 {
+                margin-bottom: 15px;
+                color: #333;
+            }
+
+            .list-container {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 10px;
+            }
+
+            .list-item {
+                background-color: #667eea;
+                color: white;
+                padding: 8px 16px;
+                border-radius: 999px;
+                font-size: 14px;
+            }
+
+            button {
+                padding: 10px 20px;
+                margin: 5px;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                font-size: 15px;
+                background-color: #667eea;
+                color: white;
+                transition: 0.3s ease;
+            }
+
+            input {
+                padding: 10px 15px;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                font-size: 15px;
+                outline: none;
+                width: 200px;
+            }
+
+            #output {
+                margin-top: 15px;
+                padding: 15px;
+                background-color: #f0f2f5;
+                border-radius: 8px;
+                font-size: 15px;
+                min-height: 40px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <h1>Arrays & Loops</h1>
+
+        <!-- ARRAY BASICS -->
+        <div class="section">
+            <h2>Array Basics</h2>
+            <button id="showArray">Show Array</button>
+            <button id="showFirst">First Item</button>
+            <button id="showLast">Last Item</button>
+            <button id="showLength">Array Length</button>
+            <div id="output1"></div>
+        </div>
+
+        <!-- LOOP THROUGH ARRAY -->
+        <div class="section">
+            <h2>Loop Through Array</h2>
+            <button id="loopBtn">Show All Items</button>
+            <div class="list-container" id="listContainer"></div>
+        </div>
+
+        <!-- ADD TO ARRAY -->
+        <div class="section">
+            <h2>Add & Remove Items</h2>
+            <input type="text" id="newItem" placeholder="Type item name...">
+            <button id="addBtn">Add Item</button>
+            <button id="removeBtn">Remove Last</button>
+            <div class="list-container" id="dynamicList"></div>
+        </div>
+
+        <!-- ARRAY METHODS -->
+        <div class="section">
+            <h2>Array Methods</h2>
+            <button id="sortBtn">Sort</button>
+            <button id="reverseBtn">Reverse</button>
+            <button id="filterBtn">Filter (score > 70)</button>
+            <div id="output2"></div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
