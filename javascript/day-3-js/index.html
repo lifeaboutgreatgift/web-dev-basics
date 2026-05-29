@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Day 3 - Events</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                padding: 40px;
+                background-color: #f0f2f5;
+            }
+
+            .box {
+                width: 200px;
+                height: 200px;
+                background-color: #667eea;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-size: 18px;
+                font-weight: bold;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                margin: 20px 0;
+            }
+
+            input {
+                padding: 10px 15px;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                font-size: 15px;
+                outline: none;
+                width: 300px;
+                margin: 10px 0;
+                display: block;
+            }
+
+            #output {
+                margin-top: 20px;
+                padding: 15px;
+                background-color: white;
+                border-radius: 8px;
+                font-size: 16px;
+                min-height: 50px;
+            }
+
+            button {
+                padding: 10px 20px;
+                margin: 5px;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                font-size: 15px;
+                background-color: #667eea;
+                color: white;
+                transition: 0.3s ease;
+            }
+        </style>
+    </head>
+    <body>
+
+        <h1>Events Practice</h1>
+
+        <!-- MOUSE EVENTS -->
+        <section>
+            <h2>Mouse Events</h2>
+            <div class="box" id="box">Hover or Click me!</div>
+        </section>
+
+        <!-- KEYBOARD EVENTS -->
+        <section>
+            <h2>Keyboard Events</h2>
+            <input type="text" id="nameInput" placeholder="Type something...">
+            <div id="output">Output appears here!</div>
+        </section>
+
+        <!-- DOUBLE CLICK -->
+        <section>
+            <h2>Double Click</h2>
+            <button id="dblBtn">Double Click Me!</button>
+            <p id="dblOutput">Not clicked yet!</p>
+        </section>
+
+        <!-- KEY DETECTION -->
+        <section>
+            <h2>Key Detection</h2>
+            <input type="text" id="keyInput" placeholder="Press any key...">
+            <p id="keyOutput">Press a key!</p>
+        </section>
+
+        <script src="script.js"></script>
+    </body>
+</html>
