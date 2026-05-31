@@ -4,7 +4,7 @@
 let heading = document.getElementById("heading");
 let paragraph = document.getElementById("paragraph");
 let box = document.getElementById("box");
-let boxx = document.querySelector(".boxx");
+let box2 = document.querySelector(".box2");
 let btn1 = document.getElementById("btn1");
 let btn2 = document.getElementById("btn2");
 let btn3 = document.getElementById("btn3");
@@ -54,7 +54,7 @@ btn4.addEventListener("click", function() {
 
 
 btn6.addEventListener("click", function() {
-    boxx.classList.toggle("active");
+    box2.classList.toggle("active");
     output.textContent = "Toggled active class!";
 });
 
