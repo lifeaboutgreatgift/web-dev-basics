@@ -160,10 +160,13 @@ body {
 .h-scroll-container::-webkit-scrollbar {
     display: none;
 }
-
+/* issue: horizontal card get fit to container that cause no scroll
+  fix: put width in card width: 600px, wide enough to force scroll work,
+  if you put width in container it will shrink the container to half it would bad and broken. */
 .h-card {
     min-width: 200px; /* fixed width - forces scroll */
     height: 120px;
+    width: 600px;
     background: linear-gradient(135deg, #667eea, #764ba2);
     border-radius: 12px;
     display: flex;
