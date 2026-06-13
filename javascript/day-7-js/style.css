@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 40px;
+    background: whitesmoke;
+    min-height: 100vh;
+    transition: 0.3s ease;
+}
+
+body.dark {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+}
+
+h1 {
+    color: black;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+body.dark h1 {
+    color: white;
+}
+
+.section {
+    background: rgba(255,255,255,0.95);
+    padding: 25px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+}
+
+body.dark .section {
+    background: rgba(255,255,255,0.1);
+    color: white;
+}
+
+.section h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+    border-left: 4px solid #667eea;
+    padding-left: 10px;
+}
+
+body.dark .section h2 {
+    color: white;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    background: red;
+    color: white;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+input {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    margin: 5px;
+    width: 200px;
+}
+
+.output {
+    margin-top: 15px;
+    padding: 15px;
+    background: #f8f9ff;
+    border-radius: 8px;
+    font-size: 15px;
+    min-height: 40px;
+    border-left: 4px solid #667eea;
+    line-height: 1.6;
+}
+
+/* TODO */
+.todo-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.todo-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 15px;
+    background: #f8f9ff;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+}
+
+.todo-item.completed {
+    opacity: 0.6;
+    text-decoration: line-through;
+    border-left-color: #43e97b;
+}
+
+.todo-item-text {
+    flex: 1;
+    cursor: pointer;
+}
+
+.todo-actions {
+    display: flex;
+    gap: 5px;
+}
+
+.todo-actions button {
+    padding: 5px 12px;
+    font-size: 12px;
+    margin: 0;
+}
+
+pre {
+    background: #1a1a1a;
+    color: #43e97b;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+.delete-btn {
+    background: linear-gradient(135deg, #f5576c, #f093fb);
+}

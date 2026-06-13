@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Day 7 - localStorage & JSON</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <h1>localStorage & JSON</h1>
+
+        <!-- DARK MODE -->
+        <div class="section">
+            <h2>Dark Mode Toggle 🌙</h2>
+            <button id="darkModeBtn">Toggle Dark Mode</button>
+            <p id="darkModeStatus">Current: Light Mode</p>
+        </div>
+
+        <!-- USER PREFERENCES -->
+        <div class="section">
+            <h2>Save User Preferences</h2>
+            <input type="text" id="username" placeholder="Enter username">
+            <input type="text" id="favColor" placeholder="Favourite color">
+            <button id="saveBtn">Save Preferences</button>
+            <button id="loadBtn">Load Preferences</button>
+            <button id="clearBtn">Clear All</button>
+            <div id="prefOutput" class="output"></div>
+        </div>
+        <div class="section">
+            <h2>JSON Practice</h2>
+            <button id="toJsonBtn">Object → JSON</button>
+            <button id="fromJsonBtn">JSON → Object</button>
+            <div id="toJsonOutput" class="output"></div>
+            <div id="fromJsonOutput" class="output"></div>
+            
+        </div>
+
+        <!-- TODO LIST -->
+        <div class="section">
+            <h2>Todo List (saves on refresh!)</h2>
+            <div class="todo-input">
+                <input type="text" id="todoInput" placeholder="Add a task...">
+                <button id="addTodo">Add Task</button>
+            </div>
+            <div id="todoList" class="todo-list"></div>
+        </div>
+
+        <!-- JSON -->
+
+        <script src="script.js"></script>
+    </body>
+</html>
