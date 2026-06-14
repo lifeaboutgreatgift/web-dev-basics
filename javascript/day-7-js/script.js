@@ -168,10 +168,15 @@ document.getElementById("toJsonBtn").addEventListener("click", () => {
 });
 
 document.getElementById("fromJsonBtn").addEventListener("click", () => {
+    const jsonString = JSON.stringify(user);
+    const obj = JSON.parse(jsonString);
 
-    
-    // JSON string → Object
     let output = document.getElementById("fromJsonOutput");
-
-    output.innerHTML = "<p>hello test!</p>";
+    
+    output.innerHTML = `
+        <p>JSON string converted to Object:</p>
+        <p>Name: ${obj.name}</p>
+        <p>Age: ${obj.age}</p>
+        <p>City: ${obj.city}</p>
+    `;
 });
