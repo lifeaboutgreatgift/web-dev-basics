@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 40px;
+    background: rgb(255, 247, 247);
+    min-height: 100vh;
+}
+
+h1 {
+    color: black;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section {
+    background: rgba(255,255,255,0.95);
+    padding: 25px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+}
+
+.section h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+    border-left: 4px solid rgb(21, 20, 10);
+    padding-left: 10px;
+}
+
+.outer {
+    background-color: rgb(255, 236, 169);
+    padding: 30px;
+    border-radius: 10px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.middle {
+    background-color: rgb(45, 85, 134);
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.inner {
+    padding: 12px 24px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.output {
+    margin-top: 15px;
+    padding: 15px;
+    background: #f8f9ff;
+    border-radius: 8px;
+    font-size: 14px;
+    min-height: 40px;
+    border-left: 4px solid #667eea;
+    color: #333;
+    line-height: 1.6;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    font-weight: bold;
+    background: rgb(182, 31, 31);
+    color: white;
+}
+
+input[type="text"] {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.todo-input {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.todo-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 15px;
+    background: #f8f9ff;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+    color: #333;
+}
+
+.todo-item.completed {
+    opacity: 0.6;
+    text-decoration: line-through;
+}
+
+.delete-btn {
+    background: linear-gradient(135deg, #f5576c, #f093fb);
+    padding: 5px 12px;
+    font-size: 12px;
+}
