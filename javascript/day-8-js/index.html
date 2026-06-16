@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Day 8 - Event Delegation Practice</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <h1>Event Delegation Practice</h1>
+
+        <!-- EVENT BUBBLING DEMO -->
+        <div class="section">
+            <h2>1. Event Bubbling</h2>
+            <div class="outer" id="outer">
+                Outer
+                <div class="middle" id="middle">
+                    Middle
+                    <button class="inner" id="inner">Click Me!</button>
+                </div>
+            </div>
+            <div id="bubbleOutput" class="output"></div>
+        </div>
+
+        <!-- STOP PROPAGATION DEMO -->
+        <div class="section">
+            <h2>2. Stop Propagation</h2>
+            <label>
+                <input type="checkbox" id="stopBubbleCheckbox"> Stop bubbling
+            </label>
+            <div class="outer" id="outer2">
+                Outer
+                <div class="middle" id="middle2">
+                    Middle
+                    <button class="inner" id="inner2">Click Me!</button>
+                </div>
+            </div>
+            <div id="bubbleOutput2" class="output"></div>
+        </div>
+
+        <!-- EVENT DELEGATION - TODO LIST -->
+        <div class="section">
+            <h2>3. Event Delegation (Dynamic Todo List)</h2>
+            <div class="todo-input">
+                <input type="text" id="todoInput" placeholder="Add a task...">
+                <button id="addTodoBtn">Add</button>
+            </div>
+            <div id="todoList" class="todo-list"></div>
+            <div id="delegationOutput" class="output"></div>
+        </div>
+
+        <!-- PREVENT DEFAULT - FORM -->
+        <div class="section">
+            <h2>4. preventDefault (Form)</h2>
+            <form id="testForm">
+                <input type="text" id="formInput" placeholder="Type something...">
+                <button type="submit">Submit</button>
+            </form>
+            <div id="formOutput" class="output"></div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
