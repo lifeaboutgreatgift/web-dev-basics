@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    min-height: 100vh;
+    padding: 40px 20px;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.search-section {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+#searchInput {
+    width: 300px;
+    padding: 12px 18px;
+    border: none;
+    font-size: 15px;
+    outline: none;
+}
+
+#searchBtn {
+    padding: 12px 30px;
+    border-radius: 10px;
+    border: none;
+    background: rgb(149, 22, 43);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#searchBtn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.loading {
+    text-align: center;
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.error {
+    text-align: center;
+    font-size: 16px;
+    color: #ff6b6b;
+    margin: 20px 0;
+    padding: 15px;
+    background: rgba(255,107,107,0.1);
+    border-radius: 8px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hidden {
+    display: none;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.movie-card {
+    background: rgba(255,255,255,0.08);
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.movie-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255,255,255,0.15);
+}
+
+.movie-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    background: #333;
+}
+
+.movie-card-info {
+    padding: 12px;
+}
+
+.movie-card-info h3 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.movie-card-info p {
+    font-size: 12px;
+    color: #aaa;
+}
+
+.fav-btn,
+.remove-fav-btn {
+    width: 100%;
+    margin-top: 8px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.fav-btn {
+    background: rgba(255,255,255,0.15);
+    color: white;
+}
+
+.fav-btn:hover {
+    background: rgba(255,255,255,0.25);
+}
+
+.remove-fav-btn {
+    background: red;
+    color: white;
+}
+
+.remove-fav-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.favorites-section {
+    max-width: 1200px;
+    margin: 50px auto 0;
+}
+
+.favorites-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
