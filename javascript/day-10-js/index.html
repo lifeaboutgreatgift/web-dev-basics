@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 10 - Async Mastery Console</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app-container">
+        <header class="app-header">
+            <h1>⚡ Day 10 Sandbox: Promises & Concurrency</h1>
+            <p>Monitor HTTP streams, test payloads, and debug loop queues.</p>
+        </header>
+
+        <section class="control-panel">
+            <!-- Test Block 1 -->
+            <div class="card">
+                <h3>1. Concurrent Stream</h3>
+                <p>Fetch user data and post metrics in parallel.</p>
+                <button id="btn-concurrent" class="btn-primary">Run Promise.all()</button>
+            </div>
+
+            <!-- Test Block 2 -->
+            <div class="card">
+                <h3>2. Mutation Delivery</h3>
+                <p>Dispatch a secure simulation POST transaction.</p>
+                <button id="btn-post" class="btn-secondary">Dispatch POST</button>
+            </div>
+            
+            <!-- Test Block 3 -->
+            <div class="card">
+                <h3>3. Event Loop Priority</h3>
+                <p>Observe task queue timing inside the console log.</p>
+                <button id="btn-loop" class="btn-dark">Trigger Loop Test</button>
+            </div>
+        </section>
+
+        <!-- Dynamic Output Feed -->
+        <section class="feed-section">
+            <h2>System Outputs</h2>
+            <div id="loading-spinner" class="spinner hidden"></div>
+            <div id="output-feed" class="console-box">Click a routine above to initialize stream...</div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
