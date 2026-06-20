@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;600;700&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:       #0b0f1a;
+  --surface:  #111827;
+  --border:   #1f2d45;
+  --gold:     #f5c842;
+  --gold-dim: #a88520;
+  --red:      #ef4444;
+  --green:    #22c55e;
+  --text:     #e2e8f0;
+  --muted:    #64748b;
+  --mono:     'Share Tech Mono', monospace;
+  --display:  'Rajdhani', sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--display);
+  min-height: 100vh;
+}
+
+header {
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  background: rgba(11, 15, 26, 0.95);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  z-index: 100;
+}
+
+.header-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: var(--mono);
+  font-size: 1.1rem;
+  letter-spacing: 0.15em;
+  color: var(--gold);
+}
+
+.scoreboard {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.score {
+  font-family: var(--mono);
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.score strong { color: var(--text); }
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.intro p {
+  font-size: 1.05rem;
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.intro p strong { color: var(--gold); }
+
+#add-vault-btn {
+  font-family: var(--mono);
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  background: transparent;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  padding: 0.65rem 1.5rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+#add-vault-btn:hover {
+  background: var(--gold);
+  color: var(--bg);
+}
+
+#vaults-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.vault-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+  position: relative;
+  transition: border-color 0.3s;
+}
+
+.vault-card.won  { border-color: var(--green); }
+.vault-card.lost { border-color: var(--red); }
+
+.vault-id {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+  margin-bottom: 0.75rem;
+}
+
+.vault-dial {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid var(--border);
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  transition: border-color 0.3s, transform 0.4s;
+}
+
+.vault-card.won  .vault-dial { border-color: var(--green); }
+.vault-card.lost .vault-dial { border-color: var(--red); }
+
+.attempts-bar {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.attempt-pip {
+  width: 20px;
+  height: 6px;
+  background: var(--gold);
+  transition: background 0.2s;
+}
+
+.attempt-pip.used { background: var(--border); }
+
+.vault-feedback {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  text-align: center;
+  min-height: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--muted);
+  letter-spacing: 0.05em;
+}
+
+.vault-feedback.high { color: var(--red); }
+.vault-feedback.low  { color: var(--gold); }
+.vault-feedback.win  { color: var(--green); }
+.vault-feedback.loss { color: var(--red); }
+
+.vault-input-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.vault-input {
+  flex: 1;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: var(--mono);
+  font-size: 1rem;
+  padding: 0.5rem 0.75rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.vault-input:focus { border-color: var(--gold-dim); }
+
+.vault-guess-btn {
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  background: var(--gold);
+  color: var(--bg);
+  border: none;
+  padding: 0.5rem 0.85rem;
+  cursor: pointer;
+  font-weight: 700;
+  transition: opacity 0.2s;
+}
+
+.vault-guess-btn:hover    { opacity: 0.85; }
+.vault-guess-btn:disabled,
+.vault-input:disabled     { opacity: 0.3; cursor: not-allowed; }
+
+.vault-result {
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  margin-top: 0.85rem;
+  color: var(--muted);
+  min-height: 1rem;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%       { transform: translateX(-6px); }
+  40%       { transform: translateX(6px); }
+  60%       { transform: translateX(-4px); }
+  80%       { transform: translateX(4px); }
+}
+
+.vault-card.shake { animation: shake 0.35s ease; }
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.vault-card.won .vault-dial { animation: spin 0.6s ease; }
