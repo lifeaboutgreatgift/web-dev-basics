@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Vault — Day 11</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="logo">🔐 THE VAULT</div>
+      <div class="scoreboard">
+        <span class="score wins">🏆 Wins: <strong id="win-count">0</strong></span>
+        <span class="score losses">💀 Losses: <strong id="loss-count">0</strong></span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="intro">
+      <p>Each vault holds a secret number between <strong>1 and 100</strong>.<br/>
+      You get <strong>5 attempts</strong> to crack it. Good luck, thief.</p>
+      <button id="add-vault-btn">+ Deploy New Vault</button>
+    </div>
+    <div id="vaults-container"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
