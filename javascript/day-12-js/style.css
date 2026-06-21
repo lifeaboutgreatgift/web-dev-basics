@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;600;700&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:      #0b0f1a;
+  --surface: #111827;
+  --border:  #1f2d45;
+  --text:    #e2e8f0;
+  --muted:   #64748b;
+  --mono:    'Share Tech Mono', monospace;
+  --display: 'Rajdhani', sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--display);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+header h1 {
+  font-size: 2rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+#station {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 500px;
+}
+
+/* ── Power Bar Card ── */
+.power-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+}
+
+.power-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+
+/* Bar track */
+.bar-track {
+  width: 100%;
+  height: 14px;
+  background: var(--border);
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  width: 0%;
+  transition: width 0.3s ease, background 0.3s ease;
+  background: v-bind(color);
+}
+
+.bar-label {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+/* Buttons */
+.btn-row {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.btn-charge,
+.btn-drain {
+  flex: 1;
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  padding: 0.6rem;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  transition: opacity 0.2s;
+}
+
+.btn-charge { background: #22c55e; color: #0b0f1a; }
+.btn-drain  { background: #ef4444; color: #fff; }
+
+.btn-charge:hover,
+.btn-drain:hover { opacity: 0.8; }
+
+.btn-charge:disabled,
+.btn-drain:disabled { opacity: 0.3; cursor: not-allowed; }
