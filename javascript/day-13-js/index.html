@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hogwarts Registry — Day 13</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="logo">⚡ HOGWARTS REGISTRY</div>
+      <div class="house-points">
+        <span id="gryffindor-score">🦁 Gryffindor: 0</span>
+        <span id="slytherin-score">🐍 Slytherin: 0</span>
+        <span id="hufflepuff-score">🦡 Hufflepuff: 0</span>
+        <span id="ravenclaw-score">🦅 Ravenclaw: 0</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="controls">
+      <input id="name-input" type="text" placeholder="Student name..." />
+      <select id="house-select" title="Select house">
+        <option value="Gryffindor">Gryffindor</option>
+        <option value="Slytherin">Slytherin</option>
+        <option value="Hufflepuff">Hufflepuff</option>
+        <option value="Ravenclaw">Ravenclaw</option>
+      </select>
+      <select id="role-select" title="Select role">
+        <option value="student">Student</option>
+        <option value="prefect">Prefect</option>
+      </select>
+      <button id="enroll-btn">+ Enroll</button>
+    </div>
+
+    <div id="registry"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
