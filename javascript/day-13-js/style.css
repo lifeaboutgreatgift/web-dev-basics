@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Cinzel:wght@400;700&family=Raleway:wght@400;600&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:        #0d0d0d;
+  --surface:   #1a1a2e;
+  --border:    #2d2d4e;
+  --gold:      #c9a84c;
+  --text:      #e8e8e8;
+  --muted:     #6b7280;
+  --display:   'Cinzel', serif;
+  --body:      'Raleway', sans-serif;
+  --mono:      'Share Tech Mono', monospace;
+
+  --gryffindor: #ae0001;
+  --slytherin:  #1a472a;
+  --hufflepuff: #ecb939;
+  --ravenclaw:  #0e1a40;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--body);
+  min-height: 100vh;
+}
+
+header {
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  background: rgba(13,13,13,0.95);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  z-index: 100;
+}
+
+.header-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.logo {
+  font-family: var(--display);
+  font-size: 1.1rem;
+  color: var(--gold);
+  letter-spacing: 0.1em;
+}
+
+.house-points {
+  display: flex;
+  gap: 1rem;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--muted);
+  flex-wrap: wrap;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.controls input,
+.controls select {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: var(--body);
+  font-size: 0.9rem;
+  padding: 0.6rem 0.9rem;
+  outline: none;
+  flex: 1;
+  min-width: 140px;
+}
+
+.controls input:focus,
+.controls select:focus {
+  border-color: var(--gold);
+}
+
+#enroll-btn {
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  background: transparent;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+
+#enroll-btn:hover {
+  background: var(--gold);
+  color: var(--bg);
+}
+
+/* Registry grid */
+#registry {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+/* Student card */
+.student-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--gold);
+  padding: 1.25rem;
+  transition: border-color 0.3s;
+}
+
+.student-card.Gryffindor { border-top-color: var(--gryffindor); }
+.student-card.Slytherin  { border-top-color: var(--slytherin); }
+.student-card.Hufflepuff { border-top-color: var(--hufflepuff); }
+.student-card.Ravenclaw  { border-top-color: var(--ravenclaw); }
+
+.student-name {
+  font-family: var(--display);
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.student-meta {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.student-points {
+  font-family: var(--mono);
+  font-size: 1.4rem;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+
+.student-points span {
+  font-size: 0.7rem;
+  color: var(--muted);
+  margin-left: 0.25rem;
+}
+
+.card-btns {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.btn-add,
+.btn-remove,
+.btn-detention {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  border: none;
+  padding: 0.4rem 0.7rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn-add      { background: #22c55e; color: #0d0d0d; }
+.btn-remove   { background: #ef4444; color: #fff; }
+.btn-detention{ background: #7c3aed; color: #fff; }
+
+.btn-add:hover,
+.btn-remove:hover,
+.btn-detention:hover { opacity: 0.8; }
+
+.prefect-badge {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  background: var(--gold);
+  color: var(--bg);
+  padding: 0.2rem 0.5rem;
+  display: inline-block;
+  margin-bottom: 0.75rem;
+}
