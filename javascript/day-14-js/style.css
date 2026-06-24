@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;600;700&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:      #040608;
+  --surface: #0f1923;
+  --border:  #1a2744;
+  --green:   #1dff86;
+  --red:     #ff3b5c;
+  --yellow:  #ffd700;
+  --blue:    #4da6ff;
+  --text:    #e2e8f0;
+  --muted:   #4a5568;
+  --mono:    'Share Tech Mono', monospace;
+  --display: 'Rajdhani', sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--display);
+  min-height: 100vh;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+header {
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  background: rgba(8,12,20,0.97);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  z-index: 100;
+  box-shadow: 0 1px 20px rgba(29, 255, 134, 0.05);
+}
+
+.header-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: var(--mono);
+  font-size: 1rem;
+  color: var(--green);
+  letter-spacing: 0.15em;
+}
+
+.status-badge {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  padding: 0.3rem 0.8rem;
+  border: 1px solid var(--muted);
+  color: var(--muted);
+  letter-spacing: 0.15em;
+  transition: all 0.3s;
+}
+
+.status-badge.success { border-color: var(--green); color: var(--green); }
+.status-badge.error   { border-color: var(--red);   color: var(--red); }
+.status-badge.warning { border-color: var(--yellow); color: var(--yellow); }
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+/* Terminal */
+.terminal {
+  grid-column: 1 / -1;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--green);
+  padding: 1.25rem;
+  height: 220px;
+  overflow-y: auto;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  line-height: 1.8;
+}
+
+.terminal-line        { color: var(--text); }
+.terminal-line.muted  { color: var(--muted); }
+.terminal-line.success{ color: var(--green); }
+.terminal-line.error  { color: var(--red); }
+.terminal-line.warning{ color: var(--yellow); }
+.terminal-line.info   { color: var(--blue); }
+
+/* Mission cards */
+.mission-card {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-left: 2px solid var(--green);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: border-color 0.3s;
+}
+
+.mission-card:hover {
+    border-color: var(--green);
+    border-left-color: var(--green);
+}
+
+.mission-title {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--green);
+  letter-spacing: 0.1em;
+}
+
+.mission-title::before {
+    content: '$ ';
+    color: var(--muted);
+}
+
+.mission-desc {
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.input-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.input-row input,
+.input-row select {
+  flex: 1;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  padding: 0.5rem 0.75rem;
+  outline: none;
+}
+
+.input-row input:focus,
+.input-row select:focus { border-color: var(--green); }
+
+.btn {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.15em;
+  background: transparent;
+  border: 1px solid var(--green);
+  color: var(--green);
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  background: var(--green);
+  color: var(--bg);
+  box-shadow: 0 0 12px var(--green);
+}
+
+@media (max-width: 600px) {
+  main { grid-template-columns: 1fr; }
+}
