@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Heist Control — Day 14</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="logo">🕵️ HEIST CONTROL</div>
+      <div class="status-badge" id="status-badge">STANDBY</div>
+    </div>
+  </header>
+
+  <main>
+    <div class="terminal" id="terminal">
+      <p class="terminal-line muted">// Mission log initialized. Awaiting orders...</p>
+    </div>
+
+    <div class="missions">
+
+      <div class="mission-card">
+        <div class="mission-title">Mission 01 — Safe Crack</div>
+        <div class="mission-desc">Try/catch in action. Safe may or may not open.</div>
+        <div class="input-row">
+          <input type="number" id="safe-code" placeholder="Enter code (1-10)..." />
+          <button class="btn" id="btn-safe">ATTEMPT</button>
+        </div>
+      </div>
+
+      <div class="mission-card">
+        <div class="mission-title">Mission 02 — Data Intercept</div>
+        <div class="mission-desc">Fetch real data. Handle network errors gracefully.</div>
+        <button class="btn" id="btn-fetch">INTERCEPT</button>
+      </div>
+
+      <div class="mission-card">
+        <div class="mission-title">Mission 03 — Custom Threat</div>
+        <div class="mission-desc">Trigger custom error classes. Different threats, different responses.</div>
+        <div class="input-row">
+          <select id="threat-select" title="Select threat type">
+            <option value="network">Network Failure</option>
+            <option value="auth">Auth Breach</option>
+            <option value="data">Data Corruption</option>
+          </select>
+          <button class="btn" id="btn-threat">TRIGGER</button>
+        </div>
+      </div>
+
+      <div class="mission-card">
+        <div class="mission-title">Mission 04 — Finally Clause</div>
+        <div class="mission-desc">Finally always runs — success or failure. Watch the log.</div>
+        <button class="btn" id="btn-finally">EXECUTE</button>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
