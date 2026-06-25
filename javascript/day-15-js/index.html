@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Space Mission Control — Day 15</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="logo"> MISSION CONTROL</div>
+      <div class="header-stats">
+        <span>✅ Successful: <strong id="success-count">0</strong></span>
+        <span>❌ Failed: <strong id="fail-count">0</strong></span>
+        <span>🚀 Active: <strong id="active-count">0</strong></span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="planets-section">
+      <h2 class="section-title">SELECT TARGET PLANET</h2>
+      <div id="planets-grid"></div>
+    </section>
+
+    <section class="missions-section">
+      <h2 class="section-title">ACTIVE MISSIONS</h2>
+      <div id="missions-list"></div>
+    </section>
+
+    <section class="leaderboard-section">
+      <h2 class="section-title">MISSION LEADERBOARD</h2>
+      <div id="leaderboard"></div>
+    </section>
+  </main>
+
+  <!-- type="module" is required for import/export to work -->
+  <script type="module" src="main.js"></script>
+</body>
+</html>
