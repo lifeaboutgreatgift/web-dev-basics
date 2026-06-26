@@ -32,10 +32,10 @@ document.getElementById("showLength").addEventListener("click", function() {
 let listContainer = document.getElementById("listContainer");
 
 document.getElementById("loopBtn").addEventListener("click", function() {
-    listContainer.innerHTML = ""; // clear first!
+    listContainer.textContent = ""; // clear first!
 
     fruits.forEach(function(fruit) {
-        listContainer.innerHTML += `
+        listContainer.textContent += `
             <div class="list-item">${fruit}</div>
         `;
     });
@@ -49,9 +49,9 @@ let dynamicList = document.getElementById("dynamicList");
 let myList = ["Item 1", "Item 2", "Item 3"];
 
 function renderList() {
-    dynamicList.innerHTML = "";
-    myList.forEach(function(item) {
-        dynamicList.innerHTML += `
+    dynamicList.textContent = "";
+    myList.forEach(function(item) {  
+        dynamicList.textContent += `
             <div class="list-item">${item}</div>
         `;
     });
@@ -174,7 +174,7 @@ console.log("Joined:", names.join(", "));
 // "Aditi, John, Sarah, Mike, Zara"
 
 // ================================
-// SLICE - copy part of array!
+// SLICE - copy part of array! 
 // ================================
 let firstThree = names.slice(0, 3);
 console.log("First three:", firstThree);

@@ -1,6 +1,6 @@
 
 
-// your first function!
+//first function!
 function sayHello() {
     alert("Hello World! 🔥");
     confirm("Are you sure?");
