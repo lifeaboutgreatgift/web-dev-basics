@@ -30,18 +30,13 @@ export function renderMovies(movies) {
       ? movie.Poster
       : "https://placehold.co/200x280?text=No+Image";
 
-    // ← add poster button only when no poster
-    const changePosterBtn = !hasPoster
-      ? `<button class="change-poster-btn" data-id="${movie.imdbID}">🖼️ Add Poster</button>`
-      : "";
-
     card.innerHTML = `
       <img src="${posterUrl}" alt="${movie.Title}"
-           onerror="this.onerror=null; this.src='https://placehold.co/200x280?text=No+Image'">
+           onerror="this.onerror=null; this.src='https://placehold.co/200x280?text=No+Image'; this.nextElementSibling.querySelector('.change-poster-btn') && (this.nextElementSibling.querySelector('.change-poster-btn').style.display='block')">
       <div class="movie-card-info">
         <h3>${movie.Title}</h3>
         <p>${movie.Year}</p>
-        ${changePosterBtn}
+        <button class="change-poster-btn" data-id="${movie.imdbID}" style="display:${hasPoster ? 'none' : 'block'}">Add Poster</button>
         <button class="fav-btn" data-id="${movie.imdbID}">🤍</button>
       </div>
     `;
