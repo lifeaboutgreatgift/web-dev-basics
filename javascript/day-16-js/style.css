@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;600;700&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:      #0b0f1a;
+  --surface: #111827;
+  --border:  #1f2d45;
+  --gold:    #f5c842;
+  --green:   #22c55e;
+  --red:     #ef4444;
+  --text:    #e2e8f0;
+  --muted:   #64748b;
+  --mono:    'Share Tech Mono', monospace;
+  --display: 'Rajdhani', sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--display);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 3rem 1rem;
+}
+
+.booth {
+  width: 100%;
+  max-width: 520px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 2rem;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+.subtitle {
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--muted);
+  margin-top: 0.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.voter-row { margin-bottom: 1.5rem; }
+
+#voter-name {
+  width: 100%;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: var(--display);
+  font-size: 1rem;
+  padding: 0.7rem 1rem;
+  outline: none;
+}
+
+#voter-name:focus { border-color: var(--gold); }
+
+.candidates {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.candidate {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 0.85rem 1rem;
+}
+
+.candidate-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.candidate-name { font-weight: 700; }
+
+.candidate-count {
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  color: var(--gold);
+}
+
+.bar-track {
+  width: 100%;
+  height: 8px;
+  background: var(--border);
+  overflow: hidden;
+  margin-bottom: 0.6rem;
+}
+
+.bar-fill {
+  height: 100%;
+  background: var(--gold);
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+.vote-btn {
+  width: 100%;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  background: transparent;
+  border: 1px solid var(--green);
+  color: var(--green);
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.vote-btn:hover:not(:disabled) {
+  background: var(--green);
+  color: var(--bg);
+}
+
+.vote-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+#reset-btn {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  background: transparent;
+  border: 1px solid var(--red);
+  color: var(--red);
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+}
+
+#reset-btn:hover {
+  background: var(--red);
+  color: var(--bg);
+}
+
+.log {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--muted);
+  max-height: 100px;
+  overflow-y: auto;
+  border-top: 1px solid var(--border);
+  padding-top: 0.75rem;
+}
+
+.log p { margin-bottom: 0.3rem; }
+.log p.error { color: var(--red); }
+.log p.success { color: var(--green); }
