@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vote Booth — Day 16</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="booth">
+    <h1>Vote Booth</h1>
+    <p class="subtitle">Set tracks who voted · Map tracks the counts</p>
+
+    <div class="voter-row">
+      <input id="voter-name" type="text" placeholder="Your name..." />
+    </div>
+
+    <div id="candidates" class="candidates"></div>
+
+    <div class="stats">
+      <span>👥 Total voters: <strong id="voter-count">0</strong></span>
+      <button id="reset-btn">Reset</button>
+    </div>
+
+    <div id="log" class="log"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
