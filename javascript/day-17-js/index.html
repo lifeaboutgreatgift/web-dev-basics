@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form Validator — Day 17</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <div class="form-card">
+      <h1>Create Account</h1>
+      <p class="subtitle">All validation powered by Regex</p>
+
+      <form id="signup-form" novalidate>
+
+        <div class="field" id="field-username">
+          <label>Username</label>
+          <div class="input-wrap">
+            <input type="text" id="username" placeholder="e.g. alex_dev" />
+            <span class="icon"></span>
+          </div>
+          <p class="msg"></p>
+        </div>
+
+        <div class="field" id="field-email">
+          <label>Email</label>
+          <div class="input-wrap">
+            <input type="text" id="email" placeholder="e.g. alex@gmail.com" />
+            <span class="icon"></span>
+          </div>
+          <p class="msg"></p>
+        </div>
+
+        <div class="field" id="field-password">
+          <label>Password</label>
+          <div class="input-wrap">
+            <input type="password" id="password" placeholder="Min 8 chars..." />
+            <span class="icon"></span>
+          </div>
+          <p class="msg"></p>
+          <div class="strength-bar">
+            <div class="strength-fill" id="strength-fill"></div>
+          </div>
+          <p class="strength-label" id="strength-label"></p>
+        </div>
+
+        <div class="field" id="field-phone">
+          <label>Phone <span class="optional">(optional)</span></label>
+          <div class="input-wrap">
+            <input type="text" id="phone" placeholder="e.g. 9876543210" />
+            <span class="icon"></span>
+          </div>
+          <p class="msg"></p>
+        </div>
+
+        <button type="submit" id="submit-btn">Create Account</button>
+
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
