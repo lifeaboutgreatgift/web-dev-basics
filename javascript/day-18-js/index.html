@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Debounce + Throttle — Day 18</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- SCROLL PROGRESS BAR (throttle) -->
+  <div class="progress-bar" id="progress-bar"></div>
+
+  <div class="container">
+
+    <!-- SECTION 1 — Debounce demo -->
+    <section class="demo-section">
+      <div class="demo-label">⏳ DEBOUNCE</div>
+      <h2>Live User Search</h2>
+      <p class="desc">Waits 500ms after you stop typing before searching. Watch the counter.</p>
+
+      <div class="search-wrap">
+        <input id="search-input" type="text" placeholder="Search users..." />
+      </div>
+
+      <div class="counters">
+        <div class="counter-box">
+          <span id="keystroke-count">0</span>
+          <label>Keystrokes</label>
+        </div>
+        <div class="counter-box accent">
+          <span id="api-count">0</span>
+          <label>API Calls</label>
+        </div>
+      </div>
+
+      <div id="search-status" class="status"></div>
+      <div id="results" class="results"></div>
+    </section>
+
+    <!-- SECTION 2 — Throttle demo -->
+    <section class="demo-section">
+      <div class="demo-label">🚦 THROTTLE</div>
+      <h2>Scroll + Mouse Tracker</h2>
+      <p class="desc">Fires at most once every 200ms while scrolling or moving mouse.</p>
+
+      <div class="counters">
+        <div class="counter-box">
+          <span id="scroll-raw">0</span>
+          <label>Raw scroll events</label>
+        </div>
+        <div class="counter-box accent">
+          <span id="scroll-throttled">0</span>
+          <label>Throttled fires</label>
+        </div>
+      </div>
+
+      <div class="tracker-box" id="tracker-box">
+        <p>Move your mouse here</p>
+        <div class="cursor-dot" id="cursor-dot"></div>
+        <div class="counters">
+          <div class="counter-box">
+            <span id="mouse-raw">0</span>
+            <label>Raw mousemove</label>
+          </div>
+          <div class="counter-box accent">
+            <span id="mouse-throttled">0</span>
+            <label>Throttled fires</label>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tall content to enable scrolling -->
+    <div class="spacer">
+      <p>↑ Scroll up and down to see throttle working on the progress bar</p>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
