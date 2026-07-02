@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web APIs — Day 20</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- SECTION 1 — Live Clock + Countdown -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="label">⏱ setInterval</div>
+      <h1>Web APIs in Action</h1>
+
+      <div class="clock-wrap">
+        <div class="clock" id="clock">00:00:00</div>
+        <div class="clock-date" id="clock-date"></div>
+      </div>
+
+      <div class="countdown-wrap">
+        <div class="countdown-label">Next event in:</div>
+        <div class="countdown-boxes">
+          <div class="cd-box">
+            <span id="cd-hours">00</span>
+            <label>Hours</label>
+          </div>
+          <div class="cd-sep">:</div>
+          <div class="cd-box">
+            <span id="cd-minutes">00</span>
+            <label>Minutes</label>
+          </div>
+          <div class="cd-sep">:</div>
+          <div class="cd-box">
+            <span id="cd-seconds">00</span>
+            <label>Seconds</label>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 2 — Scroll animations (IntersectionObserver) -->
+  <section class="cards-section">
+    <div class="section-inner">
+      <div class="label">👁 IntersectionObserver</div>
+      <h2>Scroll to reveal</h2>
+      <p class="section-desc">Cards animate in when they enter the viewport</p>
+
+      <div class="cards-grid">
+        <div class="card animate-card">
+          <div class="card-icon">🚀</div>
+          <h3>Fast</h3>
+          <p>IntersectionObserver is handled by the browser — no scroll event spam</p>
+        </div>
+        <div class="card animate-card">
+          <div class="card-icon">🎯</div>
+          <h3>Precise</h3>
+          <p>Control exactly how much of an element must be visible before triggering</p>
+        </div>
+        <div class="card animate-card">
+          <div class="card-icon">💡</div>
+          <h3>Smart</h3>
+          <p>Unobserve after first trigger — no wasted work on already-seen elements</p>
+        </div>
+        <div class="card animate-card">
+          <div class="card-icon">🔄</div>
+          <h3>Reusable</h3>
+          <p>One observer can watch dozens of elements simultaneously</p>
+        </div>
+        <div class="card animate-card">
+          <div class="card-icon">📱</div>
+          <h3>Responsive</h3>
+          <p>Works perfectly on mobile — no layout thrashing or jank</p>
+        </div>
+        <div class="card animate-card">
+          <div class="card-icon">🌐</div>
+          <h3>Native</h3>
+          <p>Built into the browser — no libraries needed</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3 — Lazy loading images -->
+  <section class="lazy-section">
+    <div class="section-inner">
+      <div class="label">🖼 Lazy Loading</div>
+      <h2>Images load when needed</h2>
+      <p class="section-desc">Images only load when they're about to enter the viewport</p>
+
+      <div class="images-grid">
+        <div class="lazy-wrap">
+          <div class="lazy-placeholder" id="placeholder-1">Loading...</div>
+          <img class="lazy-img" data-src="https://picsum.photos/seed/city/400/300" alt="City" />
+        </div>
+        <div class="lazy-wrap">
+          <div class="lazy-placeholder" id="placeholder-2">Loading...</div>
+          <img class="lazy-img" data-src="https://picsum.photos/seed/nature/400/300" alt="Nature" />
+        </div>
+        <div class="lazy-wrap">
+          <div class="lazy-placeholder" id="placeholder-3">Loading...</div>
+          <img class="lazy-img" data-src="https://picsum.photos/seed/arch/400/300" alt="Architecture" />
+        </div>
+        <div class="lazy-wrap">
+          <div class="lazy-placeholder" id="placeholder-4">Loading...</div>
+          <img class="lazy-img" data-src="https://picsum.photos/seed/ocean/400/300" alt="Ocean" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4 — Infinite scroll sentinel -->
+  <section class="feed-section">
+    <div class="section-inner">
+      <div class="label">♾ Infinite Scroll</div>
+      <h2>Load more on scroll</h2>
+      <p class="section-desc">New items appear automatically as you reach the bottom</p>
+
+      <div id="feed" class="feed"></div>
+      <div id="sentinel" class="sentinel">
+        <div class="sentinel-dot"></div>
+        <div class="sentinel-dot"></div>
+        <div class="sentinel-dot"></div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
