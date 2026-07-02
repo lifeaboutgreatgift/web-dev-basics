@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event Loop Explorer — Day 19</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">
+      <h1>⚙️ Event Loop Explorer</h1>
+      <p class="subtitle">Watch how JavaScript handles sync, microtasks and macrotasks</p>
+    </div>
+
+    <!-- Visual diagram -->
+    <div class="diagram">
+
+      <div class="box" id="call-stack-box">
+        <div class="box-label">📚 Call Stack</div>
+        <div class="box-content" id="call-stack"></div>
+        <div class="box-empty" id="call-stack-empty">empty</div>
+      </div>
+
+      <div class="middle-col">
+        <div class="box" id="microtask-box">
+          <div class="box-label">⚡ Microtask Queue</div>
+          <div class="box-content" id="microtask-queue"></div>
+          <div class="box-empty" id="microtask-empty">empty</div>
+        </div>
+
+        <div class="event-loop-circle" id="event-loop">
+          <span>Event</span>
+          <span>Loop</span>
+        </div>
+
+        <div class="box" id="callback-box">
+          <div class="box-label">📬 Callback Queue</div>
+          <div class="box-content" id="callback-queue"></div>
+          <div class="box-empty" id="callback-empty">empty</div>
+        </div>
+      </div>
+
+      <div class="box" id="webapi-box">
+        <div class="box-label">🌐 Web APIs</div>
+        <div class="box-content" id="web-apis"></div>
+        <div class="box-empty" id="webapi-empty">empty</div>
+      </div>
+
+    </div>
+
+    <!-- Output log -->
+    <div class="log-section">
+      <div class="log-label">📋 Console Output</div>
+      <div id="output-log" class="output-log"></div>
+    </div>
+
+    <!-- Demo buttons -->
+    <div class="demos">
+
+      <div class="demo-card">
+        <div class="demo-title">Demo 1 — Basic Async</div>
+        <div class="demo-desc">setTimeout vs synchronous code</div>
+        <button class="btn" onclick="runDemo1()">▶ Run</button>
+      </div>
+
+      <div class="demo-card">
+        <div class="demo-title">Demo 2 — Promise vs setTimeout</div>
+        <div class="demo-desc">Microtask queue wins over callback queue</div>
+        <button class="btn" onclick="runDemo2()">▶ Run</button>
+      </div>
+
+      <div class="demo-card">
+        <div class="demo-title">Demo 3 — Async/Await</div>
+        <div class="demo-desc">How await pauses and resumes</div>
+        <button class="btn" onclick="runDemo3()">▶ Run</button>
+      </div>
+
+      <div class="demo-card">
+        <div class="demo-title">Demo 4 — Promise Chain</div>
+        <div class="demo-desc">Multiple microtasks in sequence</div>
+        <button class="btn" onclick="runDemo4()">▶ Run</button>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
